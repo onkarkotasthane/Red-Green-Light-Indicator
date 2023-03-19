@@ -1,5 +1,5 @@
 //@version=4
-study("Red Light Green Light Indicator", overlay=true)
+study("Red-Green Light Indicator", overlay=true)
 
 is_inside_candle = low > low[1] and high < high[1]
 
