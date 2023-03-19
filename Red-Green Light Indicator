@@ -1,0 +1,8 @@
+//@version=4
+study("Red Light Green Light Indicator", overlay=true)
+
+is_inside_candle = low > low[1] and high < high[1]
+
+is_opposite_candle = close < open and close[1] > open[1] or close > open and close[1] < open[1]
+
+plotshape(is_inside_candle and is_opposite_candle, style=shape.diamond, location=location.belowbar,  color=color.rgb(221, 0, 255), size = size.small)
